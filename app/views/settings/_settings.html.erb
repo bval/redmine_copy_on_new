@@ -1,0 +1,10 @@
+<fieldset>
+<legend>Copy On New Plugin settings</legend>
+<p>
+  <label>Template Project To Copy From</label>
+  <%= select_tag 'settings[copy_on_new_template_project]', options_for_select(Project.all.collect { |p| [ p.name, p.id ] }.insert(0, ['Disable Copy On New', nil]), @settings['copy_on_new_template_project']) %>
+</p>
+
+</fieldset>
+
+
