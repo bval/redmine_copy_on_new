@@ -2,9 +2,9 @@ require 'redmine'
 
 Redmine::Plugin.register :redmine_copy_on_new do
   name 'Redmine Copy On New plugin'
-  author 'Author name'
-  description 'This is a plugin for Redmine'
+  author 'Brandon Valentine <brandon@brandonvalentine.com>'
+  description 'Allow the administrator to specify a template project from which items are copied when a new project is initialized'
   version '0.0.1'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+  url 'http://github.com/brandonvalentine/redmine_copy_on_new'
+  author_url 'http://github.com/brandonvalentine'
 end
