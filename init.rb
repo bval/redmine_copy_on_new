@@ -9,6 +9,16 @@ Redmine::Plugin.register :copy_on_new do
   author_url 'http://github.com/brandonvalentine'
 
   settings :default => {
-    'template_project' => 0
+    'template_project' => 0,
+    'wiki' => 0,
+    'versions' => 0,
+    'issue_categories' => 0,
+    'issues' => 0,
+    'members' => 0,
+    'queries' => 0,
+    'boards' => 0,
   }, :partial => 'settings/settings'
 end
+
+# initialize observer
+#ActiveRecord::Base.observers << ProjectObserver
