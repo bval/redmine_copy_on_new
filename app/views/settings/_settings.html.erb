@@ -4,7 +4,12 @@
   <label>Template Project To Copy From</label>
   <%= select_tag 'settings[template_project]', options_for_select(Project.all.collect { |p| [ p.name, p.id ] }.insert(0, ['Disable Copy On New', 0]), @settings['template_project'].to_i) %>
 </p>
-
 </fieldset>
-
-
+<fieldset>
+<legend>Settings To Copy From Template Project</legend>
+  <% %w(wiki versions issue_categories issues members queries boards).each do |setting| %>
+    <p>
+    <label for="<%= "settings[#{setting}]" %>"><%= setting %></label><%= check_box_tag "settings[#{setting}]", 1, @settings[setting].to_i == 1 %>
+    </p>
+  <% end %>
+</fieldset>
