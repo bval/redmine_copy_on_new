@@ -21,4 +21,4 @@ Redmine::Plugin.register :copy_on_new do
 end
 
 # initialize observer
-#ActiveRecord::Base.observers << ProjectObserver
+ActiveRecord::Base.observers << CopyOnNewObserver
